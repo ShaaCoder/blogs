@@ -3,7 +3,10 @@ const router = express.Router()
 const User = require('../models/User')
 const bcrypt=require('bcrypt')
 const Post = require('../models/Post')
-const Comment = require('../models/comment')
+console.log('Trying to import Comment model...');
+const Comment = require('../models/comment'); // Adjust the path accordingly
+console.log('Comment model import successful.');
+
 const verifyToken = require('../verifyToken')
 //Create
 router.post("/create",verifyToken,async (req,res)=>{
