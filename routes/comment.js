@@ -4,7 +4,7 @@ const User = require('../models/User.js')
 const bcrypt=require('bcrypt')
 const Post = require('../models/Post.js')
 console.log('Trying to import Comment model...');
-const Comment = require('../models/comment.js'); // Adjust the path accordingly
+const Comment = require('../models/Comment.js'); // Adjust the path accordingly
 console.log('Comment model import successful.');
 
 const verifyToken = require('../verifyToken.js')
