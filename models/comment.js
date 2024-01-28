@@ -1,6 +1,7 @@
-const { Timestamp } = require("mongodb");
-const mongoose = require("mongoose");
-const CommentSchema = new mongoose.Schema(
+const mongoose = require('mongoose');
+
+// Define the Comment schema
+const commentSchema = new mongoose.Schema(
   {
     comment: {
       type: String,
@@ -21,4 +22,9 @@ const CommentSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-module.exports = mongoose.model("Comment", CommentSchema);
+
+// Create the Comment model based on the schema
+const Comment = mongoose.model('Comment', commentSchema);
+
+// Export the Comment model
+module.exports = Comment;
